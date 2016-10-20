@@ -2,13 +2,13 @@
     'use strict';
 
     angular.module('App')
-        .controller('AppController', AppController);
+        .controller('CalculateController', CalculateController);
 
-    AppController.$inject = ['$scope'];
+    CalculateController.$inject = ['$scope'];
 
-    function AppController($scope) {
+    function CalculateController($scope) {
         var input = document.querySelector('input.input');
-        $scope.input = '(123.17 + 13.301) × 10.131 - 4156 / 7';
+
         $scope.calculate = function () {
             $scope.result = calc($scope.input);
         };
