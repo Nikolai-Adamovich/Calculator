@@ -45,6 +45,31 @@
         $scope.clearInput = function () {
             $scope.input = '';
             $scope.result = '';
-        }
+        };
+        $scope.keyDown = function (e) {
+            var startPosition = input.selectionStart;
+
+            if (!(e.keyCode >= 112 && e.keyCode <= 123)) {//functional keys F1-F12
+                e.preventDefault();
+
+                if (e.key === '=' || e.key === 'Enter') {
+                    $scope.calculate();
+                } else if (e.key === '.' || e.key === ',') {
+                    $scope.buttonClick('.');
+                } else if (e.key === '*') {
+                    $scope.buttonClick(' × ');
+                } else if(e.key === '-' || e.key === '+' || e.key === '/') {
+                    $scope.buttonClick(' ' + e.key + ' ');
+                } else if (e.key === 'Backspace') {
+                    $scope.remove();
+                } else if (e.keyCode >= 48 && e.keyCode <= 57) {//numbers 0-9
+                    $scope.buttonClick(e.key);
+                } else if (e.keyCode === 37) {//move caret left
+                    input.setSelectionRange(startPosition - 1, startPosition - 1);
+                } else if (e.keyCode === 39) {//move caret right
+                    input.setSelectionRange(startPosition + 1, startPosition + 1);
+                }
+            }
+        };
     }
 })();

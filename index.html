@@ -10,7 +10,7 @@
 
 <div class="calc" ng-app="App" ng-controller="CalculateController">
     <div class="calc__screen">
-        <input class="input" type="text" autofocus ng-model="input">
+        <input class="input" type="text" autofocus ng-model="input" ng-keydown="keyDown($event)">
         <div class="output" ng-bind="result"></div>
     </div>
     <div class="calc__buttons">
