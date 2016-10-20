@@ -9,6 +9,7 @@
     function CalculateController($scope) {
         var input = document.querySelector('input.input');
 
+        $scope.input = '';
         $scope.calculate = function () {
             $scope.result = calc($scope.input);
         };
