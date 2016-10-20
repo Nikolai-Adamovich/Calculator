@@ -1,4 +1,6 @@
-/*@import 'https://fonts.googleapis.com/css?family=Open+Sans';*/
+/*
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+*/
 html, body, button, div, h1, header, input, li, ul {
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@ body {
 input {
     border: none;
     background: none;
+    font-family: 'Open Sans', sans-serif;
 }
 input, input:active, input:focus {
     outline: none;
@@ -62,7 +65,7 @@ li {
     height: 100%;
 }
 .calc__buttons li {
-    display: table-cell;
+    display: block;
     float: left;
     width: 25%;
     height: 20%;
@@ -71,11 +74,11 @@ li {
     line-height: 80px;
     vertical-align: middle;
 }
-.calc__buttons li:not(.dummy):hover {
+.calc__buttons li:hover {
     background: rgba(255,255,255,0.2);
     cursor: pointer;
 }
-.calc__buttons li:not(.dummy):active {
+.calc__buttons li:active {
     background: rgba(255,255,255,0.1);
     line-height: 78px;
 }

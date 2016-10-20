@@ -48,7 +48,7 @@ var calc = (function () {
                 break;
             case '-': operands.push(a - b);
                 break;
-            case '*': operands.push(a * b);
+            case '*': case '×': operands.push(a * b);
                 break;
             case '/': operands.push(a / b);
                 break;
@@ -68,7 +68,7 @@ var calc = (function () {
     function getPriority(operator) {
         switch (operator) {
             case ('('): return -1;
-            case ('*'): case('/'): return 1;
+            case ('*'): case ('×'): case('/'): return 1;
             case ('+'): case('-'): return 2;
             default: throw new Error('Недопустимая операция ' + operator);
         }
