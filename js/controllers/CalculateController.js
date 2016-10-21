@@ -7,7 +7,8 @@
     CalculateController.$inject = ['$scope'];
 
     function CalculateController($scope) {
-        var input = document.querySelector('input.input');
+        var input = document.querySelector('#input');
+        var output = document.querySelector('#output');
 
         $scope.input = '';
         $scope.calculate = function () {
@@ -40,7 +41,7 @@
             }
         };
         $scope.focus = function () {
-            input.focus();
+            output.focus();
         };
         $scope.clearInput = function () {
             $scope.input = '';
