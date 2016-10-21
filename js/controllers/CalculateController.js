@@ -8,7 +8,9 @@
 
     function CalculateController($scope) {
         var input = document.querySelector('#input');
-        var output = document.querySelector('#output');
+        var calcBottom = document.querySelector('.calc__bottom');
+
+        calcBottom.focus();
 
         $scope.input = '';
         $scope.calculate = function () {
@@ -41,7 +43,8 @@
             }
         };
         $scope.focus = function () {
-            output.focus();
+            //set focus out from input, when we use software keyboard to prevent appearance of unnecessary screen keyboard in mobile browsers
+            calcBottom.focus();
         };
         $scope.clearInput = function () {
             $scope.input = '';
@@ -70,6 +73,9 @@
                 } else if (e.keyCode === 39) {//move caret right
                     input.setSelectionRange(startPosition + 1, startPosition + 1);
                 }
+
+                //set focus to input, when we use hardware keyboard
+                input.focus();
             }
         };
     }
