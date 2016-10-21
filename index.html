@@ -6,12 +6,12 @@
     <title>Angular Calculator</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body ng-app="App" ng-controller="CalculateController" ng-keydown="keyDown($event)">
 
-<div class="calc" ng-app="App" ng-controller="CalculateController">
+<div class="calc">
     <div class="calc__screen">
         <div class="input clearfix">
-            <input id="input" class="center" type="text" autofocus ng-model="input" ng-keydown="keyDown($event)">
+            <input id="input" class="center" type="text" autofocus ng-model="input">
         </div>
         <div class="output clearfix">
             <div id="output" class="center" ng-bind="result"></div>
