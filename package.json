@@ -1,0 +1,27 @@
+{
+  "name": "calculator",
+  "version": "0.1.0",
+  "description": "angular calculator",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikolai-Adamovich/Calculator.git"
+  },
+  "dependencies": {
+    "http-server": "0.9.0"
+  },
+  "scripts": {
+    "start": "http-server ./"
+  },
+  "keywords": [
+    "calculator",
+    "angular",
+    "javascript"
+  ],
+  "author": "Nikolai Adamovich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nikolai-Adamovich/Calculator/issues"
+  },
+  "homepage": "https://github.com/Nikolai-Adamovich/Calculator#readme"
+}

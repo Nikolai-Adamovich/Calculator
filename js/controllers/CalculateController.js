@@ -72,6 +72,8 @@
                     input.setSelectionRange(startPosition - 1, startPosition - 1);
                 } else if (e.keyCode === 39) {//move caret right
                     input.setSelectionRange(startPosition + 1, startPosition + 1);
+                } else if (e.keyCode === 67) {//C
+                    $scope.clearInput();
                 }
 
                 //set focus to input, when we use hardware keyboard
